@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Local service logs
+*.log
+local_config_server.err.log
+local_config_server.out.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated project data
+/项目结构数据/output/
+
+# Generated preview/export artifacts
+/outputs/
+
+# Local database and temporary files
+*.db
+*.sqlite
+*.sqlite3
+*.tmp
+*.temp
+
+# Excel/WPS lock and replacement files
+~$*.xls*
+*_待替换.xlsx
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
