@@ -1,0 +1,43 @@
+{
+  "name": "construction-schedule-platform",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/api",
+    "dev:api": "npm run dev -w apps/api",
+    "dev:web": "npm run dev -w apps/web",
+    "build": "npm run build --workspaces --if-present",
+    "check": "npm run typecheck --workspaces --if-present && node --check local_config_server.mjs && node --check project-schedule-engine.js && node --check 项目结构数据/sync_database_config.mjs",
+    "sync": "npm run sync -w packages/data-sync",
+    "migrate": "npm run migrate -w apps/api",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/static": "^8.3.0",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "element-plus": "^2.11.9",
+    "fastify": "^5.6.2",
+    "pinia": "^3.0.4",
+    "pg": "^8.20.0",
+    "pino": "^10.1.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2",
+    "@types/pg": "^8.15.6",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "tsx": "^4.21.0",
+    "vitest": "^4.0.16",
+    "vue-tsc": "^3.1.8"
+  }
+}

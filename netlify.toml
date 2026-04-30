@@ -1,0 +1,20 @@
+[build]
+command = "npm run build -w apps/web"
+publish = "apps/web/dist"
+functions = "netlify/functions"
+
+[build.environment]
+NODE_VERSION = "24"
+VITE_API_BASE = "/api"
+
+[functions]
+node_bundler = "esbuild"
+included_files = [
+  "construction_database.mjs",
+  "apps/api/migrations/**"
+]
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200

@@ -1,0 +1,25 @@
+{
+  "name": "@construction/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vue-tsc -p tsconfig.json && vite build",
+    "typecheck": "vue-tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@construction/shared": "*",
+    "@construction/schedule-engine": "*",
+    "@element-plus/icons-vue": "^2.3.2",
+    "element-plus": "^2.11.9",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7",
+    "vue-tsc": "^3.1.8"
+  }
+}

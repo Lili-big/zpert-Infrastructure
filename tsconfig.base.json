@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@construction/shared": ["packages/shared/src/index.ts"],
+      "@construction/data-sync": ["packages/data-sync/src/index.ts"],
+      "@construction/schedule-engine": ["packages/schedule-engine/src/index.ts"]
+    }
+  }
+}

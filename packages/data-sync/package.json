@@ -1,0 +1,17 @@
+{
+  "name": "@construction/data-sync",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "sync": "tsx src/cli.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@construction/shared": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2"
+  }
+}
