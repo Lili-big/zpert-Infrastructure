@@ -5,17 +5,17 @@ import { fileURLToPath } from "node:url";
 import pg from "pg";
 
 const { Pool } = pg;
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const moduleDir = path.dirname(fileURLToPath(import.meta.url));
 
-const DEFAULT_PROJECT_STRUCTURE_PATH = path.join(__dirname, "项目结构数据", "output", "project_structure_data.json");
-const DEFAULT_RESPONSIBILITY_JSON_PATH = path.join(__dirname, "项目结构数据", "output", "responsibility_area_data.json");
-const DEFAULT_RESPONSIBILITY_JS_PATH = path.join(__dirname, "项目结构数据", "output", "responsibility_area_data.js");
+const DEFAULT_PROJECT_STRUCTURE_PATH = path.join(moduleDir, "项目结构数据", "output", "project_structure_data.json");
+const DEFAULT_RESPONSIBILITY_JSON_PATH = path.join(moduleDir, "项目结构数据", "output", "responsibility_area_data.json");
+const DEFAULT_RESPONSIBILITY_JS_PATH = path.join(moduleDir, "项目结构数据", "output", "responsibility_area_data.js");
 
 let pool = null;
 let schemaReady = false;
 
 function loadEnvFile() {
-  const envPath = path.join(__dirname, ".env");
+  const envPath = path.join(moduleDir, ".env");
   if (!fsSync.existsSync(envPath)) return;
   const text = fsSync.readFileSync(envPath, "utf8");
   text.split(/\r?\n/).forEach((line) => {
